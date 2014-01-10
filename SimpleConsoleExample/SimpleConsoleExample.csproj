@@ -54,6 +54,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PureCM.Client">
+      <HintPath>..\..\..\..\..\..\Program Files\PureCM\Client\PureCM.Client.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -68,12 +71,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AdminLists.cs" />
     <Compile Include="WorkspaceExamples.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\purecm\Windows\PureCM.Client\PureCM.Client.csproj">
-      <Project>{026627ff-9f9d-4d2d-ba1e-cdf16517d142}</Project>
-      <Name>PureCM.Client</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
