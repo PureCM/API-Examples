@@ -16,6 +16,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TriggersExample", "Triggers
 		SolutionIsControlled = True
 	EndGlobalSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CheckoutExample", "CheckoutExample\CheckoutExample.csproj", "{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}"
+	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
+		SolutionIsControlled = True
+	EndGlobalSection
+EndProject
 Global
 	GlobalSection(PureCMSourceControlProviderSolutionProperties) = preSolution
 		SolutionIsControlled = True
@@ -45,6 +50,12 @@ Global
 		{9C164402-4C38-48B0-B661-5EF5F7C00B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C164402-4C38-48B0-B661-5EF5F7C00B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9C164402-4C38-48B0-B661-5EF5F7C00B2F}.Release|x64.ActiveCfg = Release|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84FB636E-F7C1-4CC4-A8E7-7A67828ED847}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
