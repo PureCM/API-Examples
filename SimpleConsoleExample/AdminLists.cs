@@ -110,7 +110,7 @@ namespace SimpleConsoleExample
 
             foreach (FileType oFileType in oFileTypes)
             {
-                Console.Write(oFileType.Type + " (" + oFileType.Flags + ")\nDescription:\n" +
+                Console.Write(oFileType.Type + " (" + oFileType.Encoding + ")\nDescription:\n" +
                               oFileType.Description + "\nFilters:\n" + oFileType.Filters +
                               "\n------------------------------\n");
 
@@ -126,7 +126,7 @@ namespace SimpleConsoleExample
 
             foreach (FileType oFileType in oFileTypes)
             {
-                Console.Write(oFileType.Type + "(" + oFileType.Flags + ")\nDescription:\n" +
+                Console.Write(oFileType.Type + "(" + oFileType.Encoding + ")\nDescription:\n" +
                               oFileType.Description + "\nFilters:\n" + oFileType.Filters +
                               "\n------------------------------\n");
 

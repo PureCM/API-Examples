@@ -121,7 +121,7 @@ namespace ImportExportExample
 
                         if (oImportStream == null)
                         {
-                            oImportStream = oRepos.Streams.CreateNew(null, null, null, oDetails.GetNewStream(), "Imported from stream '" + oExportStream.Name + "'");
+                            oImportStream = oRepos.Streams.CreateNew(oRepos.Streams.ById(oExportStream.ParentId), null, null, oDetails.GetNewStream(), "Imported from stream '" + oExportStream.Name + "'");
 
                             if (oImportStream == null)
                             {

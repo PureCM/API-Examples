@@ -60,7 +60,14 @@ namespace ImportExportExample
                                 Console.WriteLine("Failed to submit changeset '" + oExportChange.IdString + "'. The change has not be imported.");
                             }
 
-                            oImportWS.UpdateToLatest();
+                            SDK.TPCMReturnCode tRetCode;
+
+                            oImportWS.UpdateToLatest(out tRetCode);
+
+                            if (tRetCode != SDK.TPCMReturnCode.pcmSuccess)
+                            {
+                                Console.WriteLine("Failed to update to latest after submitting '" + oExportChange.IdString + "'.");
+                            }
                         }
                     }
                     else

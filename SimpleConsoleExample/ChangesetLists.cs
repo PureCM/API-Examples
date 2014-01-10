@@ -63,7 +63,7 @@ namespace SimpleConsoleExample
 
                 Console.Write(oItem.Path);
                 Console.Write(" ");
-                Console.Write(oItem.MIMEType);
+                Console.Write(oItem.FileType.Type);
                 Console.Write("\n");
             }
         }

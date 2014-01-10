@@ -84,13 +84,8 @@ namespace SimpleConsoleExample
 
                 IssueFields oFields = oType.Fields;
 
-                foreach(uint nFieldID in oAction.MandatoryFields)
+                foreach (IssueField oField in oAction.MandatoryFields)
                 {
-                    if (nFieldID == 0)
-                        break;
-
-                    IssueField oField = oFields.ById(nFieldID);
-
                     if (oField != null)
                     {
                         Console.WriteLine("    " + oField.Name);
@@ -119,18 +114,8 @@ namespace SimpleConsoleExample
 
                 Console.WriteLine("Valid End Users:");
 
-                foreach (uint nUserID in oAction.ValidEndUsers)
+                foreach (UserOrGroup oUser in oAction.ValidEndUsers)
                 {
-                    if (nUserID == 0)
-                        break;
-
-                    UserOrGroup oUser = oUsers.ById(nUserID);
-
-                    if (oUser == null)
-                    {
-                        oUser = oGroups.ById(nUserID);
-                    }
-
                     if (oUser != null)
                     {
                         Console.WriteLine("    " + oUser.Name);
@@ -143,18 +128,8 @@ namespace SimpleConsoleExample
 
                 Console.WriteLine("Valid Operators:");
 
-                foreach (uint nUserID in oAction.ValidOperators)
+                foreach (UserOrGroup oUser in oAction.ValidOperators)
                 {
-                    if (nUserID == 0)
-                        break;
-
-                    UserOrGroup oUser = oUsers.ById(nUserID);
-
-                    if (oUser == null)
-                    {
-                        oUser = oGroups.ById(nUserID);
-                    }
-
                     if (oUser != null)
                     {
                         Console.WriteLine("    " + oUser.Name);
@@ -167,18 +142,8 @@ namespace SimpleConsoleExample
 
                 Console.WriteLine("Notified Users:");
 
-                foreach (uint nUserID in oAction.NotifiedUsers)
+                foreach (UserOrGroup oUser in oAction.NotifiedUsers)
                 {
-                    if (nUserID == 0)
-                        break;
-
-                    UserOrGroup oUser = oUsers.ById(nUserID);
-
-                    if (oUser == null)
-                    {
-                        oUser = oGroups.ById(nUserID);
-                    }
-
                     if (oUser != null)
                     {
                         Console.WriteLine("    " + oUser.Name);
@@ -212,14 +177,11 @@ namespace SimpleConsoleExample
                 String strActivationAction = "[None]";
                 IssueActions oActions = oType.Actions;
 
-                if (oState.ActivationActionId > 0 )
-                {
-                    IssueAction oActivationAction = oActions.ById(oState.ActivationActionId);
+                IssueAction oActivationAction = oState.ActivationAction;
 
-                    if (oActivationAction != null)
-                    {
-                        strActivationAction = oActivationAction.Name;
-                    }
+                if (oActivationAction != null)
+                {
+                    strActivationAction = oActivationAction.Name;
                 }
 
                 Console.WriteLine("Activation Action: " + strActivationAction);
@@ -235,13 +197,8 @@ namespace SimpleConsoleExample
 
                 Console.WriteLine("Valid Actions:");
 
-                foreach (uint nActionID in oState.ValidActions)
+                foreach (IssueAction oAction in oState.ValidActions)
                 {
-                    if (nActionID == 0)
-                        break;
-
-                    IssueAction oAction = oActions.ById(nActionID);
-
                     if (oAction != null)
                     {
                         Console.WriteLine("    " + oAction.Name);

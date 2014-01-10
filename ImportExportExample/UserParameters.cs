@@ -115,7 +115,7 @@ namespace ImportExportExample
         String m_strUsername = "LeadDeveloper1";
         String m_strPassword = "secret";
         String m_strRepository = "Example";
-        String m_strStream = "Development/Main";
+        String m_strStream = "Project 1/Version 1/Version 1";
         String m_strNewStream = "";
         String m_strIssueType = "defect";
     }
